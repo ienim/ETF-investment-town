@@ -1,0 +1,113 @@
+/* Single normal-flow layout shared by the landing and playing screens. */
+html body #root .screen:has(> .game-frame--play) {display:block; padding:12px; height:auto; min-height:100dvh; overflow:visible;}
+html body #root .game-frame--play {display:grid!important;position:relative!important;grid-template-areas:none!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto auto!important;width:100%!important;max-width:1600px!important;height:auto!important;max-height:none!important;min-height:calc(100dvh - 24px)!important;margin:auto!important;padding:12px!important;gap:16px!important;overflow:visible!important;border:3px solid #586b51;border-radius:18px;background:#ebe5cb;box-shadow:0 8px 25px #34492c30;}
+html body #root .game-frame--play .town-topbar {grid-area:auto!important;position:static!important;inset:auto!important;display:grid!important;grid-template-columns:260px minmax(0,1fr) 120px!important;gap:14px!important;align-items:center!important;padding:0!important;min-width:0;background:none!important;border:0!important;}
+html body #root .game-frame--play .town-brand {width:auto!important;max-width:none!important;min-width:0;filter:none;backdrop-filter:none;}
+html body #root .game-frame--play .town-resource-bar,html body #root .game-frame--play .start-resource-bar {grid-area:auto!important;display:grid!important;grid-auto-flow:row!important;grid-auto-columns:auto!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important;overflow:visible;padding:0;}
+html body #root .game-frame--play .start-resource-bar {grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+html body #root .game-frame--play .stat-card,html body #root .game-frame--play .start-resource-bar >span {border-radius:8px!important;background:#fff6dc!important;box-shadow:0 3px 0 #ac956c!important;min-width:0!important;}
+html body #root .game-frame--play .town-top-actions {position:static!important;grid-area:auto!important;min-width:0;}
+html body #root .game-frame--play .town-layout {position:static!important;inset:auto!important;grid-area:auto!important;display:grid!important;grid-template-columns:86px minmax(0,1fr) 340px!important;grid-template-rows:auto!important;grid-template-areas:'sidebar map tasks'!important;gap:16px!important;min-height:480px!important;overflow:visible!important;}
+html body #root .game-frame--play .town-sidebar {position:static!important;inset:auto!important;grid-area:sidebar!important;width:auto!important;padding:0!important;overflow:visible!important;}
+html body #root .game-frame--play .hub-button-grid {height:auto!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important;}
+html body #root .game-frame--play .hub-button {width:100%;min-height:74px!important;filter:none;backdrop-filter:none;background:#fff5db!important;}
+html body #root .game-frame--play .town-map {position:relative!important;inset:auto!important;grid-area:map!important;display:flex!important;flex-direction:column;gap:12px;min-height:480px!important;padding:12px!important;border-radius:12px;background:url('./assets/optimized/town-desktop.webp') center/cover no-repeat!important;image-rendering:pixelated;filter:none!important;}
+html body #root .game-frame--play .town-map::before,html body #root .game-frame--play .town-map::after {display:none!important;}
+html body #root .game-frame--play .town-map .center-title,html body #root .game-frame--play .market-clock-strip {position:static!important;inset:auto!important;display:block!important;width:auto!important;max-width:none!important;min-height:0!important;flex:none;image-rendering:auto;background:#fff9e9!important;padding:12px!important;border-radius:8px;}
+html body #root .game-frame--play .town-notice,html body #root .game-frame--play .town-map-scene,html body #root .game-frame--play .town-floating-labels {display:none!important;}
+html body #root .game-frame--play .town-task-panel {position:static!important;inset:auto!important;grid-area:tasks!important;width:auto!important;max-height:none!important;height:auto!important;min-width:0!important;margin:0!important;padding:14px!important;overflow:visible!important;background:#fff4d9!important;border:2px solid #947650;border-radius:12px;backdrop-filter:none;box-shadow:0 4px 0 #b4a17c;}
+html body #root .game-frame--play .town-bottom-bar {position:static!important;inset:auto!important;grid-area:auto!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;width:auto!important;gap:16px!important;padding:0!important;z-index:auto!important;pointer-events:auto;}
+html body #root .game-frame--play .town-bottom-note {display:block!important;max-width:none!important;width:auto!important;background:#fff6df;backdrop-filter:none;}
+html body #root .game-frame--play .start-panel-primary-button {display:none!important;}
+html body #root .game-frame--play .town-bottom-bar button {min-width:180px;}
+.garden-holdings {margin-bottom:22px;}.garden-holdings header {display:flex;justify-content:space-between;gap:12px;align-items:center;}.garden-holdings h2 {margin:0;font-size:19px;}.garden-holdings article {padding:12px 0;border-bottom:1px solid #d3bd94;}.garden-holdings p,.garden-holdings small {font-size:12px;line-height:1.6;}.garden-holdings .line-trend-chart {height:110px;width:100%;}.garden-holdings svg{width:100%;height:110px;}
+@media(max-width:1050px){html body #root .game-frame--play .town-topbar {grid-template-columns:minmax(0,1fr) 120px!important;} html body #root .game-frame--play .town-brand{grid-column:1;grid-row:1;}html body #root .game-frame--play .town-top-actions{grid-column:2!important;grid-row:1!important;}html body #root .game-frame--play .town-resource-bar,html body #root .game-frame--play .start-resource-bar{grid-column:1/-1!important;grid-row:2!important;}html body #root .game-frame--play .town-layout{grid-template-columns:78px minmax(0,1fr) 290px!important;gap:12px!important;}}
+@media(max-width:760px){html body #root .screen:has(> .game-frame--play){padding:6px;}html body #root .game-frame--play{padding:10px!important;gap:14px!important;}html body #root .game-frame--play .town-layout{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto auto!important;grid-template-areas:'sidebar' 'map' 'tasks'!important;gap:14px!important;}html body #root .game-frame--play .hub-button-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;}html body #root .game-frame--play .town-map{min-height:340px!important;background-image:url('./assets/optimized/town-mobile.webp')!important;}html body #root .game-frame--play .town-bottom-bar{grid-template-columns:minmax(0,1fr)!important;}html body #root .game-frame--play .town-bottom-bar button{width:100%;min-height:48px;}html body #root .game-frame--play .town-resource-bar{grid-template-columns:repeat(3,minmax(0,1fr))!important;}html body #root .game-frame--play .start-resource-bar{grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
+
+/* Pale jade glass surfaces. Background colors are the original image colors. */
+html body {background:#e8f1e9;color:#234b43;}
+html body #root .game-frame--play {background:#dcebe1 url('./assets/optimized/town-desktop.webp') center / cover no-repeat!important;border:2px solid #8eafa0;box-shadow:0 8px 28px #193b3520;}
+html body #root .game-frame--play .town-map {background:transparent!important;border:0!important;}
+html body #root .game-frame--play .town-brand,
+html body #root .game-frame--play .stat-card,
+html body #root .game-frame--play .start-resource-bar >span,
+html body #root .game-frame--play .hub-button,
+html body #root .game-frame--play .town-bottom-note,
+html body #root .game-frame--play .town-map .center-title,
+html body #root .game-frame--play .market-clock-strip {background:rgba(247,255,250,.84)!important;border:1px solid rgba(111,154,135,.72)!important;color:#244d43!important;border-radius:13px!important;box-shadow:0 3px 10px #123e3020!important;backdrop-filter:blur(3px);text-shadow:none!important;}
+html body #root .game-frame--play .town-task-panel {background:rgba(245,253,247,.91)!important;border:1px solid #9bbcab!important;box-shadow:0 5px 18px #173e3424!important;backdrop-filter:blur(3px);}
+html body #root .game-frame--play .town-brand h1,
+html body #root .game-frame--play .town-brand h1 span,
+html body #root .game-frame--play .town-level span,
+html body #root .game-frame--play .town-level small {color:#245849!important;text-shadow:none!important;}
+html body #root .game-frame--play .pixel-button {background:rgba(231,247,234,.9)!important;border:1px solid #7caa92!important;color:#285b49!important;text-shadow:none!important;box-shadow:0 3px 7px #214c3225!important;border-radius:10px!important;}
+html body #root .game-frame--play .pixel-button:hover {background:rgba(205,235,215,.97)!important;}
+html body #root .game-frame--play .start-primary-button,
+html body #root .game-frame--play .hub-settle-button {background:rgba(55,124,100,.94)!important;color:white!important;border-color:#347b61!important;}
+html body #root .game-frame--play .pixel-button:disabled {opacity:.55;}
+html body #root .game-frame--play .difficulty-button--selected {background:#c5e6cf!important;outline:2px solid #4c9172;outline-offset:1px;}
+html body #root .game-frame--play .town-task-panel__header,
+html body #root .game-frame--play .town-challenge-card,
+html body #root .game-frame--play .town-growth-card,
+html body #root .game-frame--play .mini-badge,
+html body #root .game-frame--play .eyebrow {background:rgba(220,240,224,.88)!important;border-color:#a2c1ab!important;color:#365a48!important;box-shadow:none!important;}
+html body #root .game-frame--play .town-task-list li {background:rgba(255,255,255,.7);border-color:#b9cfbf;}
+html body #root .game-frame--play .town-task-list .is-done {background:rgba(216,241,223,.85);}
+html body #root .game-frame--play .hub-button::after {display:none!important;}
+html body #root .game-frame--play .hub-button:disabled {opacity:.85!important;}
+html body #root .game-frame--play .town-level i {background:#d2e5d9;border-color:#9dbca7;}
+html body #root .game-frame--play .town-topbar {align-content:start!important;}
+.garden-holdings article {border-color:#bfd4c6;}
+@media(max-width:760px){html body #root .game-frame--play {background-image:url('./assets/optimized/town-mobile.webp')!important;background-size:100% auto!important;background-position:center top!important;}html body #root .game-frame--play .town-map {background:transparent!important;} }
+/* Typography and accessible icon/name/status rows. */
+html body,html body button,html body input,html body select {font-family:'Trebuchet MS','Microsoft YaHei',system-ui,sans-serif;font-weight:400;font-variant-numeric:tabular-nums;}
+html body #root .game-frame--play {font-size:15px;line-height:1.55;}
+html body #root .game-frame--play .town-brand h1,html body #root .game-frame--play .garden-holdings h2,html body #root .game-frame--play .town-bottom-note>strong {font-family:'Trebuchet MS','Microsoft YaHei',system-ui,sans-serif;font-weight:400;text-shadow:none!important;}
+html body #root .game-frame--play .hub-button {display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:28px auto minmax(16px,auto)!important;align-content:start!important;justify-items:center!important;gap:8px!important;padding:12px 6px!important;height:auto!important;min-height:106px!important;}
+html body #root .game-frame--play .hub-button::before {position:static!important;inset:auto!important;transform:none!important;grid-row:1;display:block!important;width:28px!important;height:28px!important;margin:0!important;border:0!important;border-radius:0!important;background:var(--nav-icon) center/contain no-repeat!important;content:''!important;box-shadow:none!important;}
+html body #root .game-frame--play .hub-button--trade {--nav-icon:url('./assets/icons/trade.svg');}
+html body #root .game-frame--play .hub-button--signals {--nav-icon:url('./assets/icons/signals.svg');}
+html body #root .game-frame--play .hub-button--life {--nav-icon:url('./assets/icons/life.svg');}
+html body #root .game-frame--play .hub-button--etfs {--nav-icon:url('./assets/icons/etfs.svg');}
+html body #root .game-frame--play .hub-button--save {--nav-icon:url('./assets/icons/save.svg');}
+html body #root .game-frame--play .hub-button--load {--nav-icon:url('./assets/icons/load.svg');}
+html body #root .game-frame--play .hub-button--report {--nav-icon:url('./assets/icons/report.svg');}
+html body #root .game-frame--play .hub-button strong {position:static!important;grid-row:2;display:block!important;font-size:14px!important;line-height:1.5!important;font-weight:600!important;white-space:normal;}
+html body #root .game-frame--play .hub-button span {position:static!important;grid-row:3;display:block!important;font-size:11px!important;line-height:1.5!important;white-space:normal;overflow-wrap:anywhere;}
+html body #root .game-frame--play .hub-button:not(:disabled) span {display:none!important;}
+html body #root .game-frame--play .pixel-button {font-size:14px!important;line-height:1.5!important;font-weight:600!important;min-height:44px;}
+html body #root .game-frame--play .start-panel-copy,html body #root .game-frame--play .start-quick-note,html body #root .game-frame--play .town-bottom-note p {font-size:15px!important;line-height:1.65!important;font-weight:400!important;}
+@media(max-width:760px){
+ html body #root .screen:has(> .game-frame--play) {position:relative;isolation:isolate;background:transparent;}
+ html body #root .screen:has(> .game-frame--play)::before {content:'';position:fixed;inset:0;z-index:-1;background:#dcebe1 url('./assets/optimized/town-mobile.webp') center/cover no-repeat;pointer-events:none;}
+ html body #root .game-frame--play {background:transparent!important;min-height:calc(100dvh - 12px)!important;}
+ html body #root .game-frame--play .town-map {min-height:190px!important;}
+ html body #root .game-frame--play .town-layout {min-height:0!important;}
+ html body #root .game-frame--play .start-sidebar .hub-button-grid {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+ html body #root .game-frame--play .town-task-panel {background:rgba(247,253,249,.95)!important;}
+ html body #root .game-frame--play .town-brand h1 {font-size:20px!important;line-height:1.3!important;}
+ html body #root .game-frame--play .town-topbar {grid-template-columns:minmax(0,1fr)!important;}
+ html body #root .game-frame--play .town-top-actions {grid-row:2!important;grid-column:1!important;justify-self:end;}
+ html body #root .game-frame--play .town-resource-bar,html body #root .game-frame--play .start-resource-bar {grid-row:3!important;}
+}
+
+
+/* Results occupy the viewport instead of inheriting the town HUD grid. */
+html body #root .screen:has(>.result-frame),html body #root .screen:has(>.final-frame){display:block;width:100%;height:auto;min-height:100dvh;padding:16px;overflow:visible;}
+html body #root :is(.result-frame,.final-frame){display:flex!important;flex-direction:column!important;gap:20px!important;width:100%!important;max-width:none!important;height:auto!important;min-height:calc(100dvh - 32px)!important;max-height:none!important;padding:24px!important;margin:0!important;overflow:visible!important;background:#eff7f0;border:2px solid #8dae99;border-radius:16px;box-shadow:0 5px 20px #264f3320;}
+html body #root :is(.result-frame,.final-frame)>:not(.modal-backdrop):not(.tutorial-backdrop){position:static!important;grid-area:auto!important;min-width:0!important;width:100%!important;max-width:none!important;margin:0!important;}
+html body #root :is(.result-frame,.final-frame)>.compact-header{display:flex!important;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:16px!important;background:#fffdf2;border:1px solid #b4c9b6;border-radius:12px;box-shadow:none;color:#254f41;}
+html body #root :is(.result-frame,.final-frame)>.compact-header h1{font-size:clamp(22px,3vw,32px)!important;line-height:1.3!important;margin:4px 0 0!important;color:#254f41!important;text-shadow:none!important;}
+html body #root .result-frame .result-hero{display:grid!important;grid-template-columns:100px minmax(0,1fr)!important;gap:20px;padding:16px;background:#ffffffb8;border:1px solid #c4d5c5;border-radius:12px;}
+html body #root .result-frame .result-art{width:100px;height:100px;min-height:0;align-self:start;}
+html body #root .result-frame .feedback-strip{width:auto!important;min-width:0;padding:12px!important;box-shadow:none;background:transparent;border:0;}
+html body #root .result-frame .feedback-strip p{font-size:15px;line-height:1.7;}
+html body #root :is(.result-frame,.final-frame) .result-center-shell{display:block!important;flex:1;min-height:0!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;}
+html body #root :is(.result-frame,.final-frame) .result-center-hub{position:static!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-width:none!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;}
+html body #root :is(.result-frame,.final-frame) .result-center-hub::before,html body #root :is(.result-frame,.final-frame) .result-center-hub::after{display:none!important;}
+html body #root :is(.result-frame,.final-frame) .result-button-grid{position:static!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important;width:100%!important;height:auto!important;}
+html body #root :is(.result-frame,.final-frame) .result-button-grid .hub-button{position:relative!important;display:flex!important;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;width:100%!important;min-width:0!important;min-height:150px!important;height:auto!important;padding:24px!important;background:#ffffffd9;border:1px solid #a5c4b0;border-radius:12px;box-shadow:0 3px 8px #31594016;text-align:left;}
+html body #root :is(.result-frame,.final-frame) .result-button-grid .hub-button::before,html body #root :is(.result-frame,.final-frame) .result-button-grid .hub-button::after{display:none!important;}
+html body #root :is(.result-frame,.final-frame) .result-button-grid strong{font-size:20px!important;line-height:1.4;}
+html body #root :is(.result-frame,.final-frame) .result-button-grid span{display:block!important;font-size:15px!important;line-height:1.6;}
+@media(max-width:600px){html body #root .screen:has(>.result-frame),html body #root .screen:has(>.final-frame){padding:8px;}html body #root :is(.result-frame,.final-frame){padding:12px!important;gap:14px!important;}html body #root :is(.result-frame,.final-frame) .result-button-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;}html body #root :is(.result-frame,.final-frame) .result-button-grid .hub-button{min-height:110px!important;padding:18px!important;}html body #root .result-frame .result-hero{grid-template-columns:64px minmax(0,1fr)!important;padding:10px;gap:8px;}html body #root .result-frame .result-art{width:64px;height:64px;}html body #root .result-frame .result-actions-inline{display:flex;flex-wrap:wrap;gap:8px;}}
